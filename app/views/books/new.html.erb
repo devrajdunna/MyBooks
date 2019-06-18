@@ -1,0 +1,19 @@
+
+<style type="text/css">
+  .background {
+    background-image: url("assets/bkcolors.jpeg");
+    background-size: cover; }
+</style>
+
+<body class="background" id="page-top">
+<div class="container" >
+ <a><img src="assets/bkblack.jpg" width="120" height="100%" title="Home"></a>
+ <h1>New Book</h1>
+<div class="container-fluid">
+  <div align='center'>
+	<%= render 'form', book: @book %>
+	<%= link_to 'Back', books_path,  :class =>"btn btn-secondary btn-lg" %>
+  </div>
+</div>
+</div>
+</body>

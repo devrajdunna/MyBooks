@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<style type="text/css">
+  .background {
+    background-image: url("assets/bkcolors.jpeg");
+    background-size: cover; }
+</style>
+
+<body class="background" id="page-top">
+<div class="container" >
+<p>
+  <strong>Bookname:</strong>
+  <%= @book.bname %>
+</p>
+<p>
+  <strong>Writer:</strong>
+  <%= @book.bwriter %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+<p>
+  <strong>Bprise:</strong>
+  <%= @book.bprise %>
+</p>
+<p>
+  <strong>Total Pages:</strong>
+  <%= @book.No_of_pages %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book), :class => "btn btn-primary btn-lg" %> |
+<%= link_to 'Back', books_path,  :class => "btn btn-secondary btn-lg"%>
+</div>
+</body>

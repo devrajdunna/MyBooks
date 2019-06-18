@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<%= form_with(model: book, local: true) do |form| %>
+  <% if book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% book.errors.full_messages.each do |message| %>
+        <li>
+          <div class="alert alert-info">
+          <strong>Info!</strong> Indicates a neutral informative change or action.
+          </div><%= message %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="alert alert-warning" role="alert">
+    <%= notice %>  
+  </div>
+<table class='field'>
+ <tr>
+  <td><%= form.label :bname %></td>
+  <td><%= form.text_field :bname %></td>
+ </tr>
+<tr>
+  <td><%= form.label :bwriter %></td>
+  <td><%= form.text_area :bwriter %></td>
+</tr>
+<tr>
+  <td><%= form.label :bprise %></td>
+  <td><%= form.number_field :bprise %></td>
+</tr>
+<tr>
+  <td><%= form.label :description %></td>
+  <td><%= form.text_area :description %></td>
+</tr>
+<tr>
+  <td><%= form.label :No_of_pages %></td>
+  <td><%= form.number_field :No_of_pages %></td>
+</tr>
+</table>
+
+  <div class="actions">
+  &nbsp;&nbsp;&nbsp;&nbsp;<%= form.submit %>
+  </div>
+<% end %>
