@@ -1,0 +1,2 @@
+class Reviwe < ApplicationRecord
+end

@@ -1,39 +1,40 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
  
 
 <div>
-  <h1 align="center"><font color='blue' >Book World</font></</h1>
-  <h2 align="center">Pick Your Book</</h2>
+  <h1 align='center'><font color='blue' >Book World</font></</h1>
+  <h2 align='center'>Pick Your Book</</h2>
 </div>
 <title>Pick Your Book</title>
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <link href="scrolling-nav.css" rel="stylesheet">
+  <link href='bootstrap.min.css' rel='stylesheet'>
+  <link href='scrolling-nav.css' rel='stylesheet'>
 </head>
 
-<style type="text/css">
+<style type='text/css'>
   .background {
-    background-image: url("assets/bkside.jpeg");
+    background-image: url('assets/bkside.jpeg');
     background-size: cover;
   }
   </style>
-<p id="notice"><%= notice %></p>
-<body class="background" id="page-top">
-<div class="container" ></div>
 
-<div class="row">
- <div class="col-6">
-  <table class="table">
+<p id='notice'><%= notice %></p>
+<body class='background' id='page-top'>
+<div class='container'></div>
+
+<div class='row'>
+ <div class='col-6'>
+  <table class='table'>
    <thead>
-   <tr>
-    <th scope="col">BookName</th>
-    <th scope="col">Writer</th>
-    <th scope="col">Description</th>
-    <th scope="col">Prise</th>
-    <th scope="col">PageCount</th>
+   <tr >
+    <th scope='col'><font color = '#2267B9'>BookName</th>
+    <th scope='col'><font color = '#2267B9'>Writer</th>
+    <th scope='col'><font color = '#2267B9'>Description</th>
+    <th scope='col'><font color = '#2267B9'>Prise</th>
+    <th scope='col'><font color = '#2267B9'>PageCount</th>
     </tr>
    </thead>
    <tbody>
@@ -44,15 +45,17 @@
      <td><%= book.description %></td>
      <td><%= book.bprise %></td>
      <td><%= book.No_of_pages %></td>
-     <td><%= link_to 'Show',book, :class => "btn btn-success"%></td>
-     <td><%= link_to 'Edit', edit_book_path(book), :class => "btn btn-info" %></td>
-     <td><%= link_to 'Destroy', book,:class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     <td><%= link_to 'Show',book, :class => 'btn btn-success'%></td>
+     <td><%= link_to 'Edit', edit_book_path(book), :class => 'btn btn-info' %></td>
+     <td><%= link_to 'Reviwe', reviwes_bookreviwe_path , :class => 'btn btn-success'%></td>
+     <td><%= link_to 'Destroy', book,:class => 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
    <%end%>
    </tbody>
    </table>
    <p> To Enter new record :
-   <%= link_to 'New Book', new_book_path , :class => "btn btn-success" %></p>
- </div>
- <div class="col-6"> </div> 
+   <%= link_to 'New Book', new_book_path , :class => 'btn btn-success'%></p>
+    </div>
+ <div class='col-6'> </div> 
 </div>
+ 

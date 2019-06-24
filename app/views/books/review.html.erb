@@ -1,0 +1,21 @@
+<html>
+
+<body class="background" id="page-top">
+<div class="container" >
+ <a><img src="assets/bkblack.jpg" width="120" height="100%" title="Home"></a>
+ <h1>New Book</h1>
+	<div class="container-fluid">
+		<button type="button" class="btn btn-primary" data-toggle ='home' data-target='#model-1'>
+  	<div class='home' id='model-1'>
+  	<div class='model-content'>
+  		
+  		<div class ="header">
+		<%= render 'form', book: @book %>
+		<%= link_to 'Back', books_path,  :class =>"btn btn-secondary btn-lg" %>
+		<%= link_to 'New Book', new_book_path , :class => "btn btn-success" %></p>
+	    </div>
+	</div>
+  	</div>
+	</div>
+</div>
+</body>

@@ -1,8 +1,10 @@
 
 
 <h1>Editing Book</h1>
-
-<%= render 'form', book: @book %>
-
-<%= link_to 'Show',@book, :class => "btn btn-success"%></td> |
-<%= link_to 'Home', books_path,:class => "btn btn-info" %>
+<p>
+  <%= render 'form', book: @book %>
+ </p>
+ <p>
+  <%= link_to 'Show',@book, :class => "btn btn-success"%> 
+  <%= link_to 'Back', books_path,:class => "btn btn-info" %>
+</p>

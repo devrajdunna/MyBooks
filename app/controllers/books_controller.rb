@@ -12,6 +12,9 @@ class BooksController < ApplicationController
   def show
   end
 
+  def review
+  end
+
   # GET /books/new
   def new
     @book = Book.new

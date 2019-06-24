@@ -10,16 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_15_060201) do
+ActiveRecord::Schema.define(version: 2019_06_18_090721) do
 
   create_table "books", force: :cascade do |t|
     t.string "bname"
-    t.string "bwriter" 
-    t.text "description"
-    t.integer "No_of_pages"
+    t.string "bwriter"
     t.integer "bprise"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    end
+    t.text "description"
+    t.integer "No_of_pages"
+  end
+
+  create_table "reviwes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
